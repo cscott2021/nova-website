@@ -1,0 +1,208 @@
+<section class="relative py-32 px-6 overflow-hidden" id="mobile">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-b from-nova-deep via-nova-base/30 to-nova-deep"></div>
+  <div class="absolute top-1/3 right-0 w-[500px] h-[500px] rounded-full opacity-10" style="background: radial-gradient(circle, #7c3aed 0%, transparent 70%);"></div>
+  <div class="absolute bottom-1/4 left-0 w-[400px] h-[400px] rounded-full opacity-10" style="background: radial-gradient(circle, #67e8f9 0%, transparent 70%);"></div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-20">
+      <span class="text-sm font-mono text-nova-cyan uppercase tracking-widest mb-4 block">Command Center</span>
+      <h2 class="font-heading text-4xl sm:text-5xl font-bold text-nova-text mb-6">
+        Run agents from<br/>
+        <span class="bg-gradient-to-r from-nova-cyan to-nova-lavender bg-clip-text text-transparent">anywhere</span>
+      </h2>
+      <p class="text-nova-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
+        Kick off AI agents on your Mac, then monitor, approve, and steer them from your phone. Your workflow doesn't stop when you walk away from your desk.
+      </p>
+    </div>
+
+    <!-- Two-column: Phone mockup + Features -->
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <!-- Phone mockup -->
+      <div class="flex-1 flex justify-center">
+        <div class="relative">
+          <!-- Phone frame -->
+          <div class="w-[280px] sm:w-[300px] rounded-[40px] border-2 border-nova-border/60 bg-nova-base p-3 shadow-2xl shadow-nova-violet/10">
+            <!-- Notch -->
+            <div class="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-6 bg-nova-deep rounded-full z-20"></div>
+
+            <!-- Screen -->
+            <div class="rounded-[32px] bg-nova-deep overflow-hidden">
+              <!-- Status bar -->
+              <div class="flex items-center justify-between px-6 pt-8 pb-2">
+                <span class="text-xs text-nova-text-dim font-mono">9:41</span>
+                <div class="flex items-center gap-1">
+                  <div class="w-4 h-2.5 border border-nova-text-dim rounded-sm relative">
+                    <div class="absolute inset-0.5 bg-nova-success rounded-xs"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- App header -->
+              <div class="px-4 py-3 flex items-center justify-between border-b border-nova-border/30">
+                <div class="flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-nova-violet to-nova-lavender flex items-center justify-center">
+                    <svg width="12" height="12" viewBox="0 0 20 20" fill="none">
+                      <g transform="translate(10, 10)">
+                        <rect x="-0.8" y="-7" width="1.6" height="14" rx="0.8" fill="white"/>
+                        <rect x="-7" y="-0.8" width="14" height="1.6" rx="0.8" fill="white"/>
+                        <circle r="1.5" fill="white"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-heading font-semibold text-nova-text">Agents</span>
+                </div>
+                <span class="text-xs text-nova-success font-medium bg-nova-success/10 px-2 py-1 rounded-full">3 active</span>
+              </div>
+
+              <!-- Agent list -->
+              <div class="p-3 space-y-2.5">
+                <!-- Agent 1 - Running -->
+                <div class="bg-nova-surface/40 rounded-xl p-3 border border-nova-border/30">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-nova-success animate-pulse"></div>
+                      <span class="text-xs font-semibold text-nova-text">Auth Refactor</span>
+                    </div>
+                    <span class="text-[10px] text-nova-success font-mono bg-nova-success/10 px-1.5 py-0.5 rounded">running</span>
+                  </div>
+                  <p class="text-[11px] text-nova-text-dim mb-2">Migrating to JWT tokens across 4 files...</p>
+                  <div class="w-full bg-nova-deep rounded-full h-1.5">
+                    <div class="bg-gradient-to-r from-nova-violet to-nova-lavender h-1.5 rounded-full" style="width: 68%;"></div>
+                  </div>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="text-[10px] text-nova-text-dim">68% complete</span>
+                    <span class="text-[10px] text-nova-text-dim">2m ago</span>
+                  </div>
+                </div>
+
+                <!-- Agent 2 - Needs approval -->
+                <div class="bg-nova-amber/5 rounded-xl p-3 border border-nova-amber/20">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-nova-amber animate-pulse"></div>
+                      <span class="text-xs font-semibold text-nova-text">Deploy Pipeline</span>
+                    </div>
+                    <span class="text-[10px] text-nova-amber font-mono bg-nova-amber/10 px-1.5 py-0.5 rounded">needs approval</span>
+                  </div>
+                  <p class="text-[11px] text-nova-text-dim mb-2.5">Ready to push to staging. Approve?</p>
+                  <div class="flex gap-2">
+                    <button class="flex-1 text-[11px] font-semibold text-white bg-nova-success/80 rounded-lg py-1.5">Approve</button>
+                    <button class="flex-1 text-[11px] font-semibold text-nova-text-dim bg-nova-surface/60 rounded-lg py-1.5">Reject</button>
+                  </div>
+                </div>
+
+                <!-- Agent 3 - Running -->
+                <div class="bg-nova-surface/40 rounded-xl p-3 border border-nova-border/30">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center gap-2">
+                      <div class="w-2 h-2 rounded-full bg-nova-success animate-pulse"></div>
+                      <span class="text-xs font-semibold text-nova-text">Test Suite</span>
+                    </div>
+                    <span class="text-[10px] text-nova-success font-mono bg-nova-success/10 px-1.5 py-0.5 rounded">running</span>
+                  </div>
+                  <p class="text-[11px] text-nova-text-dim mb-2">Running integration tests... 24/31 passed</p>
+                  <div class="w-full bg-nova-deep rounded-full h-1.5">
+                    <div class="bg-gradient-to-r from-nova-success to-nova-cyan h-1.5 rounded-full" style="width: 77%;"></div>
+                  </div>
+                </div>
+
+                <!-- Agent 4 - Completed -->
+                <div class="bg-nova-surface/20 rounded-xl p-3 border border-nova-border/20">
+                  <div class="flex items-center justify-between mb-1">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-3.5 h-3.5 text-nova-success" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      <span class="text-xs font-semibold text-nova-text-muted">Code Review</span>
+                    </div>
+                    <span class="text-[10px] text-nova-text-dim font-mono">done</span>
+                  </div>
+                  <p class="text-[11px] text-nova-text-dim">Reviewed PR #42 — 2 suggestions, no blockers</p>
+                </div>
+              </div>
+
+              <!-- Bottom nav bar -->
+              <div class="flex items-center justify-around py-3 border-t border-nova-border/30 mt-1">
+                <div class="flex flex-col items-center gap-0.5">
+                  <svg class="w-5 h-5 text-nova-text-dim" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
+                  <span class="text-[9px] text-nova-text-dim">Chat</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <svg class="w-5 h-5 text-nova-lavender" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+                  <span class="text-[9px] text-nova-lavender font-medium">Agents</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <svg class="w-5 h-5 text-nova-text-dim" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+                  <span class="text-[9px] text-nova-text-dim">Screenshots</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <svg class="w-5 h-5 text-nova-text-dim" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span class="text-[9px] text-nova-text-dim">Settings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glow behind phone -->
+          <div class="absolute inset-[-20px] rounded-[60px] opacity-20 -z-10" style="background: radial-gradient(ellipse, #7c3aed 0%, transparent 70%);"></div>
+        </div>
+      </div>
+
+      <!-- Feature list -->
+      <div class="flex-1 space-y-8 max-w-lg">
+        <div class="space-y-6">
+          <!-- Feature 1 -->
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-nova-violet/10 border border-nova-violet/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-nova-lavender" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-nova-text mb-1">Launch agents from desktop, control from mobile</h3>
+              <p class="text-nova-text-muted text-sm leading-relaxed">Start a complex code refactor or deployment on your Mac, then walk away. Monitor progress, review output, and approve actions right from your phone.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-nova-cyan/10 border border-nova-cyan/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-nova-cyan" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-nova-text mb-1">Approve and intervene in real time</h3>
+              <p class="text-nova-text-muted text-sm leading-relaxed">Agents ask for permission before destructive actions. Approve deploys, reject risky commits, or inject new instructions — all from a notification on your phone.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-nova-success/10 border border-nova-success/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-nova-success" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-nova-text mb-1">Seamless desktop ↔ mobile handoff</h3>
+              <p class="text-nova-text-muted text-sm leading-relaxed">Start a voice conversation on your phone while walking. When you sit down, the session is already on your desktop — full history, notes, and agent state intact.</p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-nova-amber/10 border border-nova-amber/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-nova-amber" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading text-lg font-semibold text-nova-text mb-1">Review screenshots and visual diffs</h3>
+              <p class="text-nova-text-muted text-sm leading-relaxed">Your agents capture screenshots as they work. Browse the visual timeline, compare before/after states, and catch issues — all from your pocket.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <span class="inline-flex items-center gap-2 bg-nova-violet/10 border border-nova-violet/20 rounded-full px-4 py-2 text-sm text-nova-text-muted">
+            <svg class="w-4 h-4 text-nova-lavender" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            iOS app coming soon
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

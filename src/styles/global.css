@@ -1,0 +1,170 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Cosmic Nova palette */
+  --color-nova-base: #0f0a1e;
+  --color-nova-deep: #080515;
+  --color-nova-surface: #1e1b4b;
+  --color-nova-surface-light: #2d2a5e;
+  --color-nova-violet: #7c3aed;
+  --color-nova-violet-hover: #6d28d9;
+  --color-nova-violet-light: #8b5cf6;
+  --color-nova-lavender: #a78bfa;
+  --color-nova-text: #f5f3ff;
+  --color-nova-text-muted: #c4b5fd;
+  --color-nova-text-dim: #6b6394;
+  --color-nova-border: #312e81;
+  --color-nova-border-light: #4338ca;
+  --color-nova-success: #34d399;
+  --color-nova-error: #f87171;
+  --color-nova-cyan: #67e8f9;
+  --color-nova-amber: #fbbf24;
+
+  /* Fonts */
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-nova-deep);
+  color: var(--color-nova-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-nova-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-nova-text-dim); }
+
+/* ── Animations ── */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(3deg); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.05); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+.animate-gradient { animation: gradient-shift 8s ease infinite; background-size: 200% 200%; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+.animate-shimmer { animation: shimmer 3s linear infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.8s ease-out both; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* ── Glass card ── */
+.glass {
+  background: rgba(30, 27, 75, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+.glass:hover {
+  background: rgba(30, 27, 75, 0.6);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+/* ── Glow button ── */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.3),
+    0 0 60px rgba(124, 58, 237, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 30px rgba(124, 58, 237, 0.5),
+    0 0 80px rgba(124, 58, 237, 0.2),
+    0 8px 32px rgba(124, 58, 237, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ── Secondary button ── */
+.btn-secondary {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.1);
+}
+.btn-secondary:hover {
+  border-color: rgba(124, 58, 237, 0.6);
+  background: rgba(124, 58, 237, 0.2);
+  transform: translateY(-1px);
+}
+
+/* ── Section divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-nova-border) 20%, var(--color-nova-violet) 50%, var(--color-nova-border) 80%, transparent 100%);
+}
+
+/* ── Star field ── */
+.star-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.star-field .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: star-twinkle 3s ease-in-out infinite;
+}

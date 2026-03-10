@@ -1,0 +1,69 @@
+---
+const capabilities = [
+  {
+    title: 'Multi-Model Intelligence',
+    description: 'Switch between Claude, GPT-4, and other leading models on the fly. Use the best model for each task without leaving your workflow.',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>`,
+  },
+  {
+    title: 'Project-Scoped Memory',
+    description: 'Nova remembers context per project. Your conversations, files, and agent outputs stay organized and searchable.',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>`,
+  },
+  {
+    title: 'Wake Word Activation',
+    description: 'Just say "Nova" to activate. Hands-free voice control means you never have to break your flow to interact with AI.',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"/></svg>`,
+  },
+  {
+    title: 'Local-First Architecture',
+    description: 'Your data lives on your machine. Nova runs locally with Electron, keeping your code, conversations, and files private and fast.',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z"/></svg>`,
+  },
+  {
+    title: 'Agent Dashboard',
+    description: 'Visual topology of every agent — parent-child relationships, live status, progress bars. Pause, cancel, or reprioritize any running agent.',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25a2.25 2.25 0 01-2.25-2.25v-2.25z"/></svg>`,
+  },
+  {
+    title: 'Cross-Device Sync',
+    description: 'Conversations, notes, and agent state sync in real time between Mac and iPhone. Both devices stay connected — no "transferring" needed.',
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>`,
+  },
+];
+---
+
+<section class="relative py-32 px-6" id="capabilities">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-b from-nova-deep via-nova-base/50 to-nova-deep"></div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-20">
+      <span class="text-sm font-mono text-nova-violet uppercase tracking-widest mb-4 block">Capabilities</span>
+      <h2 class="font-heading text-4xl sm:text-5xl font-bold text-nova-text mb-6">
+        Built for power users
+      </h2>
+      <p class="text-nova-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
+        Every detail designed for people who ship fast and think big.
+      </p>
+    </div>
+
+    <!-- Capabilities grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {capabilities.map((cap, i) => (
+        <div class="group glass rounded-2xl p-6 transition-all duration-300 hover:bg-nova-surface/60">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-nova-violet/10 border border-nova-violet/20 flex items-center justify-center text-nova-lavender flex-shrink-0 group-hover:bg-nova-violet/20 group-hover:border-nova-violet/30 transition-all duration-300">
+              <Fragment set:html={cap.icon} />
+            </div>
+            <div>
+              <h3 class="font-heading text-base font-semibold text-nova-text mb-2">{cap.title}</h3>
+              <p class="text-sm text-nova-text-muted leading-relaxed">{cap.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

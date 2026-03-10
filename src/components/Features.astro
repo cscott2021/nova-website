@@ -1,0 +1,91 @@
+---
+const features = [
+  {
+    icon: 'chat',
+    title: 'AI Chat',
+    description: 'Conversational AI that remembers context across sessions. Multi-model support, rich markdown rendering, file attachments, and persistent project-scoped memory.',
+    color: 'violet',
+    gradient: 'from-nova-violet/20 to-nova-violet/5',
+    borderHover: 'hover:border-nova-violet/40',
+  },
+  {
+    icon: 'mic',
+    title: 'Voice Control',
+    description: 'Talk to Nova naturally with real-time speech recognition. A beautiful voice orb interface brings your AI assistant to life — hands-free productivity.',
+    color: 'cyan',
+    gradient: 'from-nova-cyan/20 to-nova-cyan/5',
+    borderHover: 'hover:border-nova-cyan/40',
+  },
+  {
+    icon: 'code',
+    title: 'Code & Agents',
+    description: 'Built-in code editor with Claude Code integration. Spawn AI agents that write, test, and deploy code autonomously while you focus on the big picture.',
+    color: 'success',
+    gradient: 'from-nova-success/20 to-nova-success/5',
+    borderHover: 'hover:border-nova-success/40',
+  },
+  {
+    icon: 'mobile',
+    title: 'Run Agents Anywhere',
+    description: 'Launch agents on your Mac and monitor them from your phone. Approve deploys, review screenshots, and steer your AI workforce — no desk required.',
+    color: 'amber',
+    gradient: 'from-nova-amber/20 to-nova-amber/5',
+    borderHover: 'hover:border-nova-amber/40',
+  },
+];
+
+const iconSvgs: Record<string, string> = {
+  chat: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12c0 4.418-3.582 8-8 8a8.01 8.01 0 01-3.72-.917L3 20l1.338-3.57A7.96 7.96 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"/><path stroke-linecap="round" d="M9 12h.01M12 12h.01M15 12h.01"/></svg>`,
+  mic: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z"/></svg>`,
+  code: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>`,
+  mobile: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>`,
+};
+
+const colorClasses: Record<string, string> = {
+  violet: 'text-nova-violet',
+  cyan: 'text-nova-cyan',
+  success: 'text-nova-success',
+  amber: 'text-nova-amber',
+};
+---
+
+<section class="relative py-32 px-6" id="features">
+  <!-- Background glow -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] opacity-10" style="background: radial-gradient(ellipse, #7c3aed 0%, transparent 70%);"></div>
+
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-20">
+      <span class="text-sm font-mono text-nova-violet uppercase tracking-widest mb-4 block">Features</span>
+      <h2 class="font-heading text-4xl sm:text-5xl font-bold text-nova-text mb-6">
+        Everything in one place
+      </h2>
+      <p class="text-nova-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
+        Stop juggling between ChatGPT, your terminal, voice apps, and automation tools. Nova brings it all together in a single, beautiful desktop experience.
+      </p>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {features.map((feature, i) => (
+        <div class={`group relative rounded-2xl border border-nova-border/50 bg-gradient-to-br ${feature.gradient} p-8 transition-all duration-500 ${feature.borderHover} hover:shadow-xl hover:shadow-nova-violet/5`}>
+          <!-- Icon -->
+          <div class={`w-14 h-14 rounded-xl bg-nova-surface/80 border border-nova-border/50 flex items-center justify-center mb-6 ${colorClasses[feature.color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Fragment set:html={iconSvgs[feature.icon]} />
+          </div>
+
+          <!-- Content -->
+          <h3 class="font-heading text-xl font-bold text-nova-text mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-nova-text-muted leading-relaxed">
+            {feature.description}
+          </p>
+
+          <!-- Hover glow -->
+          <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style="background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.05) 0%, transparent 70%);"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

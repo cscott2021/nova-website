@@ -1,0 +1,7 @@
+{
+  "app": "npx tsx cdk/bin/app.ts",
+  "context": {
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/core:enablePartitionLiterals": true
+  }
+}

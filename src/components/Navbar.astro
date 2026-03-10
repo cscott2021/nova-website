@@ -1,0 +1,70 @@
+---
+const navLinks = [
+  { label: 'Features', href: '#features' },
+  { label: 'Mobile & Agents', href: '#mobile' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Capabilities', href: '#capabilities' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="relative">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-nova-violet to-nova-lavender flex items-center justify-center shadow-lg shadow-nova-violet/20">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g transform="translate(10, 10)">
+              <rect x="-1" y="-8" width="2" height="16" rx="1" fill="white" opacity="0.9"/>
+              <rect x="-8" y="-1" width="16" height="2" rx="1" fill="white" opacity="0.9"/>
+              <rect x="-0.6" y="-5.5" width="1.2" height="11" rx="0.6" fill="white" opacity="0.5" transform="rotate(45)"/>
+              <rect x="-0.6" y="-5.5" width="1.2" height="11" rx="0.6" fill="white" opacity="0.5" transform="rotate(-45)"/>
+              <circle r="2" fill="white"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <span class="font-heading text-xl font-bold text-nova-text group-hover:text-nova-lavender transition-colors">Nova</span>
+    </a>
+
+    <!-- Nav links -->
+    <div class="hidden md:flex items-center gap-8">
+      {navLinks.map(link => (
+        <a href={link.href} class="text-sm text-nova-text-muted hover:text-nova-text transition-colors font-medium">
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <a
+      href="#beta-signup"
+      class="btn-glow inline-flex items-center gap-2 bg-nova-violet hover:bg-nova-violet-hover text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-all duration-200"
+    >
+      Request Access
+    </a>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 80) {
+      navbar?.classList.add('nav-scrolled');
+    } else {
+      navbar?.classList.remove('nav-scrolled');
+    }
+    lastScroll = currentScroll;
+  });
+</script>
+
+<style>
+  .nav-scrolled {
+    background: rgba(8, 5, 21, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(49, 46, 129, 0.5);
+  }
+</style>
