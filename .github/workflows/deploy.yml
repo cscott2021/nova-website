@@ -41,9 +41,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: CDK Bootstrap
-        run: npx cdk bootstrap aws://${{ secrets.AWS_ACCOUNT_ID }}/${{ secrets.AWS_REGION }} --trust ${{ secrets.AWS_ROLE_ARN }} --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess
-
       - name: CDK Deploy
         run: npx cdk deploy --require-approval never -c domainName=nova.scottventures.com
 
